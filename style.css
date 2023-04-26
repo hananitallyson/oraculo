@@ -27,6 +27,15 @@ body {
 
 /* Main */
 
+.container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 720px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -35,18 +44,41 @@ body {
     padding: 56px 8px 0px;
 }
 
+.content__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-top: 1.5%;
+}
+
 .content__logo {
     margin-top: 150px;
     height: 46px;
 }
 
+.content__logo.resultado {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 0;
+    height: 35px;
+}
+
 .content__search {
-    color: rgb(255, 255, 255);
+    display: flex;
     margin-top: 18px;
-    width: 100%;
-    max-width: 720px;
-    height: 60px;
+}
+
+.content__search.resultado {
+    margin-top: 0;
+}
+
+.content__search input {
+    position: relative;
+    left: 2%;
+    color: rgb(255, 255, 255);
     padding: 7px 10px 6px 20px;
+    width: 720px;
+    height: 60px;
     font-size: 18px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50px;
@@ -55,8 +87,37 @@ body {
     box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.content__search::placeholder {
+.content__search input::placeholder {
     color: rgba(255, 255, 255, 0.5);
+}
+
+.content__search button {
+    position: relative;
+    left: -5%;
+    background: none;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.content__result {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.content__result span {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 720px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.title {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .content__section.ads {
@@ -83,6 +144,11 @@ body {
     width: 150px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
+    transition: all 300ms;
+}
+
+.content__ads.elements div:hover {
+    transform: scale(1.1);
 }
 
 /* Footer */
