@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+input,
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+html, 
+body {
+    height: 100%;
+    background-color: #306c8e;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 56px 8px 0px;
+}
+
+.content__logo {
+    margin-top: 150px;
+    height: 46px;
+}
+
+.content__search {
+    color: rgb(255, 255, 255);
+    margin-top: 18px;
+    width: 100%;
+    max-width: 720px;
+    height: 60px;
+    padding: 7px 10px 6px 20px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    border: 1.5px solid #ffffff;
+    outline: none;
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.content__search::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.content__section.ads {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.content__ads.title {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+.content__ads.elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.content__ads.elements div {
+    height: 150px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.footer__section:not(:first-child) {
+    border-top: 1px solid #e4e4e4;
+}
+
+.footer__phrase {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 14px;
+}
+
+.footer__section.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 14px;
+}
+
+/* Media Query */
+
+@media (min-width: 765px) {
+    .content{
+        padding-top: 120px;
+    }
+
+    .content__logo {
+        height: 100px;
+    }
+}
